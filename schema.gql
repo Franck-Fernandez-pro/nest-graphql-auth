@@ -7,7 +7,21 @@ type User {
   username: String!
 }
 
+type LoginResponse {
+  accessToken: String!
+  user: User!
+}
+
 type Query {
   users: [User!]!
   user(username: String!): User!
+}
+
+type Mutation {
+  login(loginUserInput: LoginUserInput!): LoginResponse!
+}
+
+input LoginUserInput {
+  username: String!
+  password: String!
 }
