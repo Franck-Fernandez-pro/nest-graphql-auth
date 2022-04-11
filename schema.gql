@@ -19,6 +19,7 @@ type Query {
 
 type Mutation {
   login(loginUserInput: LoginUserInput!): LoginResponse!
+  signup(loginUserInput: LoginUserInput!): User!
 }
 
 input LoginUserInput {
